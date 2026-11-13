@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ===== SEO cơ bản — BƯỚC 1 của Bài 8 ===== -->
+<!-- title 57 ký tự: tên quán + điều khách tìm + địa điểm -->
+<title>Cà phê Sớm Mai — quán cà phê học bài ở Hải Châu, Đà Nẵng</title>
+
+<!-- description 152 ký tự: nói rõ làm được gì trên trang -->
+<meta name="description" content="Xem thực đơn và đặt bàn trước tại Cà phê Sớm Mai, Hải Châu, Đà Nẵng. Mở cửa 6h30–22h30 mỗi ngày, có chỗ để xe máy miễn phí, bàn lớn cho nhóm học bài.">
+
+<link rel="canonical" href="https://caphesommai.vn/">
+
+<!-- ===== Open Graph — hiện khi chia sẻ lên Facebook, Zalo ===== -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cà phê Sớm Mai">
+<meta property="og:title" content="Cà phê Sớm Mai — quán cà phê học bài ở Đà Nẵng">
+<meta property="og:description" content="Thực đơn, giá và đặt bàn trước. Mở cửa 6h30–22h30 mỗi ngày tại Hải Châu, Đà Nẵng.">
+<!-- URL tuyệt đối, không dùng đường dẫn tương đối -->
+<meta property="og:image" content="https://caphesommai.vn/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://caphesommai.vn/">
+<meta property="og:locale" content="vi_VN">
+
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- ===== Dữ liệu có cấu trúc cho Google ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CafeOrCoffeeShop",
+  "name": "Cà phê Sớm Mai",
+  "url": "https://caphesommai.vn/",
+  "image": "https://caphesommai.vn/og-image.png",
+  "priceRange": "20.000₫ – 55.000₫",
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "06:30",
+    "closes": "22:30"
+  }],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Quận Hải Châu",
+    "addressRegion": "Đà Nẵng",
+    "addressCountry": "VN"
+  }
+}
+</script>
+<!-- [cần điền] streetAddress và telephone — brief chưa chốt, không bịa -->
+
+<style>
+  :root{
+    --color-bg-default:#fff; --color-bg-surface:#f7f9fc; --color-bg-inverse:#16181d;
+    --color-text-primary:#233348; --color-text-muted:#6b7b90; --color-text-on-inverse:#f7f9fc;
+    --color-action-primary:#f26b21; --color-action-hover:#d4551a;
+    --color-border-default:#d7dee8; --color-border-subtle:#ebeff5; --color-state-danger:#d93025;
+    --space-sm:8px; --space-md:16px; --space-lg:24px; --space-xl:32px;
+    --space-2xl:48px; --space-4xl:96px;
+    --radius-md:12px; --radius-lg:16px; --radius-pill:999px;
+    --font-body:Inter,"Segoe UI",system-ui,sans-serif;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;font-family:var(--font-body);color:var(--color-text-primary);background:var(--color-bg-default)}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 var(--space-lg)}
+
+  .site-header{border-bottom:1px solid var(--color-border-subtle)}
+  .site-header .wrap{display:flex;align-items:center;justify-content:space-between;
+                     gap:var(--space-lg);min-height:72px;flex-wrap:wrap}
+  .brand{font-weight:800;letter-spacing:.14em;font-size:13px;color:var(--color-action-primary);
+         text-decoration:none}
+  .site-nav{display:flex;gap:var(--space-md);list-style:none;margin:0;padding:0}
+  .site-nav a{color:var(--color-text-muted);text-decoration:none;font-size:15px;font-weight:600;
+              padding:var(--space-sm) 0}
+  .site-nav a:hover{color:var(--color-action-primary)}
+
+  .hero{padding:var(--space-4xl) 0 var(--space-2xl)}
+  .hero h1{margin:0 0 var(--space-md);font-size:clamp(30px,5vw,48px);line-height:1.15;letter-spacing:-.02em}
+  .hero p{margin:0;font-size:18px;line-height:1.6;color:var(--color-text-muted);max-width:60ch}
+  .hours{display:inline-flex;gap:var(--space-sm);align-items:center;margin-top:var(--space-lg);
+         background:var(--color-bg-surface);border-radius:var(--radius-pill);
+         padding:var(--space-sm) var(--space-md);font-size:15px;font-weight:600}
+  .dot{width:9px;height:9px;border-radius:50%;background:#1b8a5a}
+
+  .menu{padding:var(--space-2xl) 0 var(--space-4xl)}
+  .menu h2{margin:0 0 var(--space-sm);font-size:32px;line-height:1.25;letter-spacing:-.01em}
+  .menu__lead{margin:0 0 var(--space-xl);color:var(--color-text-muted);font-size:16px;line-height:1.5}
+  .menu__grid{list-style:none;margin:0;padding:0;display:grid;gap:var(--space-xl);grid-template-columns:1fr}
+  @media(min-width:768px){.menu__grid{grid-template-columns:repeat(2,minmax(280px,1fr))}}
+  @media(min-width:1200px){.menu__grid{grid-template-columns:repeat(3,minmax(280px,1fr))}}
+
+  .dish{display:block;color:inherit;text-decoration:none;background:var(--color-bg-surface);
+        border:1px solid var(--color-border-default);border-radius:var(--radius-lg);overflow:hidden;
+        transition:border-color .15s ease}
+  .dish:hover{border-color:var(--color-action-primary)}
+  .dish:focus-visible{outline:3px solid var(--color-action-primary);outline-offset:2px}
+  .dish__media{aspect-ratio:1/1;display:grid;place-items:center;background:var(--color-bg-default)}
+  .dish__media img{width:100%;height:100%;object-fit:cover;display:block}
+  .dish__media--empty{background:var(--color-bg-surface);
+        border:1.5px dashed var(--color-state-danger);color:var(--color-state-danger);font-size:13px}
+  .dish__body{display:flex;flex-direction:column;gap:var(--space-sm);padding:var(--space-lg)}
+  .dish__name{margin:0;font-size:24px;font-weight:600;line-height:1.3}
+  .dish__desc{margin:0;font-size:16px;line-height:1.5;color:var(--color-text-muted)}
+  .dish__price{margin:0;font-size:24px;font-weight:600;color:var(--color-action-primary)}
+
+  .site-footer{background:var(--color-bg-inverse);color:var(--color-text-on-inverse);
+               padding:var(--space-2xl) 0}
+  .site-footer h2{font-size:15px;margin:0 0 var(--space-sm);letter-spacing:.08em;text-transform:uppercase}
+  .site-footer p{margin:0 0 var(--space-sm);font-size:14px;line-height:1.7;opacity:.85}
+  .site-footer a{color:var(--color-text-on-inverse)}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/">CÀ PHÊ SỚM MAI</a>
+    <nav aria-label="Điều hướng chính">
+      <ul class="site-nav">
+        <li><a href="#thuc-don">Thực đơn</a></li>
+        <li><a href="#gio-mo-cua">Giờ mở cửa</a></li>
+        <li><a href="#lien-he">Liên hệ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero wrap" aria-labelledby="trang-chu">
+    <!-- đúng một H1 trên toàn trang, nói rõ trang này là gì -->
+    <h1 id="trang-chu">Cà phê Sớm Mai — chỗ ngồi học bài ở Hải Châu</h1>
+    <p>Xem thực đơn, biết trước giá, và giữ chỗ cho nhóm trước khi tới. Quán cách Đại học Duy Tân khoảng 400m, có chỗ để xe máy miễn phí.</p>
+    <p class="hours" id="gio-mo-cua"><span class="dot" aria-hidden="true"></span> Mở cửa 6h30 – 22h30 mỗi ngày</p>
+  </section>
+
+  <section class="menu wrap" id="thuc-don" aria-labelledby="menu-title">
+    <h2 id="menu-title">Món quen ở Sớm Mai</h2>
+    <p class="menu__lead">Sáu món nổi bật để bạn chọn nhanh khi ghé quán, từ cà phê, trà đến đồ ăn nhẹ.</p>
+
+    <ul class="menu__grid">
+      <li>
+        <a class="dish" href="/thuc-don/ca-phe-den-da">
+          <span class="dish__media"><img src="images/ca-phe-den-da.jpg" alt="Ly cà phê đen đá trên mặt bàn gỗ sáng" width="900" height="900" loading="lazy"></span>
+          <span class="dish__body">
+            <h3 class="dish__name">Cà phê đen đá</h3>
+            <span class="dish__desc">Pha phin, đậm, ít ngọt</span>
+            <span class="dish__price">20.000 ₫</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="dish" href="/thuc-don/ca-phe-sua-da">
+          <span class="dish__media"><img src="images/ca-phe-sua-da.jpg" alt="Ly cà phê sữa đá với lớp sữa đặc phía dưới" width="900" height="900" loading="lazy"></span>
+          <span class="dish__body">
+            <h3 class="dish__name">Cà phê sữa đá</h3>
+            <span class="dish__desc">Phin truyền thống, sữa đặc</span>
+            <span class="dish__price">25.000 ₫</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="dish" href="/thuc-don/ca-phe-dua">
+          <span class="dish__media dish__media--empty">[cần điền ảnh]</span>
+          <span class="dish__body">
+            <h3 class="dish__name">Cà phê dừa</h3>
+            <span class="dish__desc">Cà phê đá xay cùng nước cốt dừa</span>
+            <span class="dish__price">39.000 ₫</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="dish" href="/thuc-don/tra-dao-cam-sa">
+          <span class="dish__media dish__media--empty">[cần điền ảnh]</span>
+          <span class="dish__body">
+            <h3 class="dish__name">Trà đào cam sả</h3>
+            <span class="dish__desc">Đào miếng, sả tươi, uống mát</span>
+            <span class="dish__price">35.000 ₫</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="dish" href="/thuc-don/tra-vai-hoa-hong">
+          <span class="dish__media dish__media--empty">[cần điền ảnh]</span>
+          <span class="dish__body">
+            <h3 class="dish__name">Trà vải hoa hồng</h3>
+            <span class="dish__desc">Vải ngâm, cánh hồng khô, thơm nhẹ</span>
+            <span class="dish__price">38.000 ₫</span>
+          </span>
+        </a>
+      </li>
+      <li>
+        <a class="dish" href="/thuc-don/banh-mi-chao">
+          <span class="dish__media dish__media--empty">[cần điền ảnh]</span>
+          <span class="dish__body">
+            <h3 class="dish__name">Bánh mì chảo</h3>
+            <span class="dish__desc">Trứng, pate, xúc xích, ăn kèm bánh mì</span>
+            <span class="dish__price">45.000 ₫</span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </section>
+</main>
+
+<footer class="site-footer" id="lien-he">
+  <div class="wrap">
+    <h2>Liên hệ</h2>
+    <p>Quận Hải Châu, Đà Nẵng · [cần điền] số nhà và tên đường</p>
+    <p>Điện thoại: [cần điền]</p>
+    <p>Quán không nhận đặt bàn cho nhóm trên 12 người qua website.</p>
+    <p>© 2026 Cà phê Sớm Mai · Tài liệu học tập môn SOA105</p>
+  </div>
+</footer>
+
+</body>
+</html>
