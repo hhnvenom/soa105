@@ -1,7 +1,9 @@
 :root{
     --color-bg-default:#fff; --color-bg-surface:#f7f9fc; --color-bg-inverse:#16181d;
-    --color-text-primary:#233348; --color-text-muted:#6b7b90; --color-text-on-inverse:#f7f9fc;
-    --color-action-primary:#f26b21; --color-action-hover:#d4551a;
+    --color-text-primary:#233348; --color-text-muted:#5a6b80; --color-text-on-inverse:#f7f9fc;
+    /* v1.3: ba giá trị dưới đây đã đổi sau khi đo tương phản — xem Changelog Bài 3.
+       muted cũ #6b7b90 chỉ đạt 4.10:1, cam cũ #f26b21 làm nền nút chỉ đạt 3.04:1. */
+    --color-action-primary:#c24c14; --color-action-hover:#a03f10;
     --color-border-default:#d7dee8; --color-border-subtle:#ebeff5; --color-state-danger:#d93025;
     --space-sm:8px; --space-md:16px; --space-lg:24px; --space-xl:32px;
     --space-2xl:48px; --space-4xl:96px;
