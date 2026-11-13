@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://caphesommai.vn/sitemap.xml
+Sitemap: https://soa105.netlify.app/sitemap.xml
